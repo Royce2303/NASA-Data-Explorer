@@ -1,0 +1,87 @@
+/* layout.css - Modern Dark UI */
+/* Remove all default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Set full background to black */
+  color: white; /* Optional: default text color */
+  height: 100%;
+overflow-x: hidden;
+}
+.App {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Scrollable thumbnail strip */
+.thumbnail-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 10px;
+  padding: 1rem 0;
+  max-width: 100%;
+  white-space: nowrap;
+  scrollbar-width: thin;
+}
+
+/* Individual thumbnails */
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: transform 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.thumbnail:hover,
+.thumbnail.selected {
+  transform: scale(1.1);
+  opacity: 1;
+  border: 2px solid #888;
+}
+.thumbnail-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+}

@@ -1,0 +1,102 @@
+/* === Navbar Container === */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.95); /* Semi-transparent black background */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  padding: 0.6rem 1.5rem; /* Slightly smaller padding for reduced height */
+  position: sticky; /* Sticks navbar to top on scroll */
+  top: 0;
+  z-index: 100; /* Stays above other elements */
+  border-bottom: 1px solid #222;
+  height: 58px; /* Optional fixed height to keep it compact */
+}
+
+/* === Brand (Logo + Title) === */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.1rem; /* Slightly smaller font for reduced navbar height */
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* Space between emoji and text */
+}
+
+/* === Gradient Heading === */
+.gradient-heading {
+  background: linear-gradient(to right, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === Navigation Links === */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Space between nav items */
+}
+
+.navbar-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 0.95rem; /* Slightly smaller for cleaner layout */
+}
+
+.navbar-links a:hover,
+.navbar-links .active {
+  color: white;
+  border-bottom: 2px solid #06b6d4; /* Highlight active or hovered link */
+}
+
+/* === GitHub Icon Link === */
+.github-link a {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.github-link a:hover {
+  color: white;
+}
+
+/* === Hamburger Menu (Mobile) === */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* === Responsive Styles for Small Screens === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 100%; /* Push below the navbar */
+    right: 0;
+    background-color: #111;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.open {
+    display: flex; /* Show menu when active */
+  }
+
+  .navbar-links li {
+    margin-bottom: 1rem; /* Space between stacked items */
+  }
+
+  .navbar-links li.github-link {
+    margin-left: auto; /* Push GitHub icon to the right */
+  }
+}

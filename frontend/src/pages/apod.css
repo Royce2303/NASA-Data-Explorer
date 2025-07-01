@@ -1,0 +1,138 @@
+/* Main container for the APOD page */
+.apod-container {
+  padding: 3rem 2rem;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Gradient-styled main title */
+.apod-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #7f5af0, #2cb67d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Date picker section styling */
+.apod-date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.apod-date-picker input {
+  padding: 0.4rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Card that displays the image/video and info */
+.apod-card {
+  background-color: #1e1e2e;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Image styling */
+.apod-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* Video (iframe) styling */
+.apod-video {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* Info section inside the card */
+.apod-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.apod-date {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.apod-desc {
+  font-size: 1.05rem;
+  color: #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+/* Button wrapper */
+.apod-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button styles */
+.apod-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #2563eb;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.apod-btn:hover {
+  background-color: #6e4ce5;
+}
+
+/* Loading state text */
+.apod-loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Custom styled date input */
+.apod-date-picker input[type="date"] {
+  background-color: black;
+  color: white;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #2563eb;
+  border-radius: 999px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(127, 90, 240, 0.6);
+}
+
+/* Invert the calendar icon for dark mode */
+.apod-date-picker input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Hover effect on date input */
+.apod-date-picker input[type="date"]:hover {
+  border-color: #2cb67d;
+  box-shadow: 0 0 12px rgba(44, 182, 125, 0.7);
+}
+
+/* Date label styling */
+.apod-date-picker label {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 0.6rem;
+}

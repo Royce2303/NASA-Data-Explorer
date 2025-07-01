@@ -1,0 +1,99 @@
+.epic-container {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.gradient-heading {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #7f5af0, #2cb67d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.epic-date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.epic-date-picker input[type="date"] {
+  background-color: black;
+  color: white;
+  border: 2px solid #4fd1c5;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.epic-date-picker input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.epic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.epic-card {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.epic-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.epic-info {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+.epic-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #7f5af0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.epic-link:hover {
+  text-decoration: underline;
+}
+
+.epic-chart {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.loader {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}

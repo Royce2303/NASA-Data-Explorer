@@ -1,0 +1,86 @@
+/* Main container styling for the About API page */
+.about-api-container {
+  padding: 3rem;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000; /* Black background for dark theme */
+}
+
+/* Gradient-styled heading */
+.gradient-heading {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Introductory paragraph styling */
+.intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  color: #cdd6f4;
+}
+
+/* Responsive grid layout for API cards */
+.api-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Individual API card styling */
+.api-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for cards */
+.api-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon styling within each card */
+.api-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fffff; /* (Typo: should be #ffffff for valid white color) */
+}
+
+/* API card title */
+.api-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* API card description */
+.api-card p {
+  color: #a8b2d1;
+  font-size: 0.95rem;
+}
+
+/* Call to action section at the bottom (currently unused) */
+.cta {
+  margin-top: 4rem;
+  background-color: #111827;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2cb67d;
+}
+
+.cta p {
+  color: #cbd5e1;
+}

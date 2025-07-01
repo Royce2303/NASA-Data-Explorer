@@ -1,0 +1,87 @@
+/* Root app container - centers text by default */
+.App {
+  text-align: center;
+}
+
+/* Logo styling - adjusts logo height responsively */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none; /* Prevents mouse interactions */
+}
+
+/* Animates the logo if user prefers animations */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* App header styles - vertically and horizontally centered layout */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin); /* Responsive font size */
+  color: white;
+}
+
+/* Styling for links within the app */
+.App-link {
+  color: #61dafb;
+}
+
+/* Keyframes for spinning the logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Resetting default styles and applying layout consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base body styles for dark theme and clean typography */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Make all images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Uniform heading line heights */
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+/* Responsive heading size for small screens */
+@media (max-width: 600px) {
+  .gradient-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* Adjust h2 size for hierarchy clarity */
+h2 {
+  font-size: 1.3rem;
+}
+
+/* Base font sizing for text elements */
+p, a, label {
+  font-size: 0.95rem;
+}

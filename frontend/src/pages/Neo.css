@@ -1,0 +1,166 @@
+/* Main container for the NEO (Near Earth Object) page */
+.neo-container {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Form wrapper for selecting dates and submitting */
+.neo-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Label styling inside form */
+.neo-form label {
+  font-weight: 500;
+}
+
+/* Styling for date input and button elements in form */
+.neo-form input,
+.neo-form button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Primary button style */
+.neo-form button,
+.neo-button {
+  background: #8e44ad;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Hover effect for buttons */
+.neo-form button:hover,
+.neo-button:hover {
+  background: #a569bd;
+}
+
+/* Grid layout for displaying NEO cards (used in earlier version) */
+.neo-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* NEO info card styling */
+.neo-card {
+  background: #111927;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+/* Hazardous asteroid card highlight */
+.neo-card.hazard {
+  border: 2px solid #ff5252;
+}
+
+/* Card title */
+.neo-card h3 {
+  color: #6cc0ff;
+  margin-bottom: 0.5rem;
+}
+
+/* Link inside card */
+.neo-card a {
+  color: #9b59b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover effect for link */
+.neo-card a:hover {
+  text-decoration: underline;
+}
+
+/* Cards container */
+.neo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Date input specific styling with glowing border */
+.neo-date-input {
+  background-color: black;
+  color: white;
+  border: 2px solid #2c43ff;
+  padding: 10px 20px;
+  border-radius: 2rem;
+  box-shadow: 0 0 8px rgba(44, 67, 255, 0.6);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0.5rem;
+}
+
+/* Styled submit/search button */
+.neo-button {
+  background: #8e44ec;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Loader text styling */
+.loader {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+/* Mobile-first stacked layout for forms */
+.search-bar,
+.rover-form {
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-bar input,
+.rover-form input,
+.rover-form select {
+  width: 100%;
+}
+
+/* Responsive behavior: align form elements in a row on larger screens */
+@media (min-width: 600px) {
+  .search-bar,
+  .rover-form {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search-bar input,
+  .rover-form input,
+  .rover-form select {
+    width: auto;
+  }
+}
