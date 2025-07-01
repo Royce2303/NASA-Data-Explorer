@@ -75,7 +75,7 @@ const Navbar = () => {
         {/* GitHub external link icon */}
         <li className="github-link">
           <a
-            href="https://github.com/your-username/your-repo" // Replace this with your actual repo link
+            href="https://github.com/Royce2303/NASA-Data-Explorer.git" 
             target="_blank"
             rel="noopener noreferrer"
           >
