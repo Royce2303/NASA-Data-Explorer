@@ -1,19 +1,19 @@
 import React from "react";
 import "./AboutApi.css";
 
-// Importing relevant icons for each API card
-import { FaSatellite, FaCameraRetro, FaSpaceShuttle, FaCloud } from "react-icons/fa";
+// Icons for each API card
+import { FaSatellite, FaCameraRetro, FaSpaceShuttle, FaCloud, FaPhotoVideo } from "react-icons/fa"; // 🠔 Added FaPhotoVideo for Library
 
-// Importing React Router hook to navigate between routes
+// Hook to navigate between routes
 import { useNavigate } from "react-router-dom";
 
-// Array of NASA APIs to display on the page
+// Array of NASA APIs
 const apiData = [
   {
     icon: <FaSatellite />,
     title: "EPIC - Earth Polychromatic Imaging Camera",
     description: "Daily imagery and data from NASA's EPIC instrument onboard the DSCOVR satellite.",
-    route: "/epic", // Route to redirect on click
+    route: "/epic",
   },
   {
     icon: <FaCameraRetro />,
@@ -33,11 +33,17 @@ const apiData = [
     description: "Track asteroids and comets that come close to Earth using NASA’s NEO API.",
     route: "/neo",
   },
+  {
+    // 🠔 Added Library API card
+    icon: <FaPhotoVideo />,
+    title: "NASA Image and Video Library",
+    description: "Search NASA’s official database of over 140,000 images, videos, and audio files.",
+    route: "/library",
+  },
 ];
 
-// Main component rendering the About APIs page
 const AboutApi = () => {
-  const navigate = useNavigate(); // Hook to navigate programmatically
+  const navigate = useNavigate();
 
   return (
     <div className="about-api-container">
@@ -46,14 +52,14 @@ const AboutApi = () => {
         Explore powerful public APIs provided by NASA. These APIs offer real-time data, images, and scientific discoveries directly from space.
       </p>
 
-      {/* Grid of clickable API cards */}
+      {/* Render API cards */}
       <div className="api-grid">
         {apiData.map((api, index) => (
           <div
             className="api-card"
             key={index}
-            onClick={() => navigate(api.route)} // Navigate to the route on click
-            style={{ cursor: "pointer" }} // Pointer cursor on hover
+            onClick={() => navigate(api.route)}
+            style={{ cursor: "pointer" }}
           >
             <div className="api-icon">{api.icon}</div>
             <h3>{api.title}</h3>
